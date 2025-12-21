@@ -4,14 +4,14 @@ const EducationSection = () => {
   const education = [
     {
       degree: 'Master of Science in Artificial Intelligence',
-      institution: 'Stanford University',
+      institution: 'Your University',
       period: '2021 - 2023',
-      description: 'Specialized in Deep Learning and Natural Language Processing. Thesis on Transformer architectures for multimodal learning.',
+      description: 'Specialized in Deep Learning and Natural Language Processing. Research focused on Transformer architectures for multimodal learning.',
       icon: GraduationCap,
     },
     {
       degree: 'Bachelor of Science in Computer Science',
-      institution: 'MIT',
+      institution: 'Your University',
       period: '2017 - 2021',
       description: 'Focus on Machine Learning and Data Science. Graduated with honors. Minor in Mathematics.',
       icon: BookOpen,
@@ -90,12 +90,12 @@ const EducationSection = () => {
               ))}
             </div>
 
-            {/* Stats */}
+            {/* Stats - Updated for fresher */}
             <div className="grid grid-cols-3 gap-4 mt-8">
               {[
-                { value: '5+', label: 'Years Experience' },
-                { value: '20+', label: 'Projects Completed' },
-                { value: '15+', label: 'Publications' },
+                { value: '3', label: 'Projects' },
+                { value: '4+', label: 'Certifications' },
+                { value: '2+', label: 'Years Learning' },
               ].map((stat) => (
                 <div key={stat.label} className="glass-card p-4 rounded-xl text-center hover-glow">
                   <div className="font-display text-3xl font-bold text-gradient">

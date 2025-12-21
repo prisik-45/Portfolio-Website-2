@@ -93,7 +93,7 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'grid-pattern': 'linear-gradient(to right, hsl(38, 92%, 50%, 0.05) 1px, transparent 1px), linear-gradient(to bottom, hsl(38, 92%, 50%, 0.05) 1px, transparent 1px)',
+        'grid-pattern': 'linear-gradient(to right, hsl(50, 100%, 50%, 0.05) 1px, transparent 1px), linear-gradient(to bottom, hsl(50, 100%, 50%, 0.05) 1px, transparent 1px)',
       },
       backgroundSize: {
         'grid': '50px 50px',

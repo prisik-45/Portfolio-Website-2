@@ -1,4 +1,4 @@
-import { ArrowDown, Sparkles } from 'lucide-react';
+import { Linkedin, Github, FileText, Download } from 'lucide-react';
 import { Button } from './ui/button';
 
 const HeroSection = () => {
@@ -15,42 +15,62 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float animation-delay-400" />
 
       <div className="container-custom relative z-10 text-center px-4">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8 animate-fade-in-up">
-          <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-          <span className="text-sm text-primary font-medium">AI Engineer & ML Specialist</span>
-        </div>
-
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in-up animation-delay-200">
-          <span className="text-foreground">Building the</span>
-          <br />
-          <span className="text-gradient">Future with AI</span>
-        </h1>
-
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up animation-delay-400">
-          Transforming complex problems into intelligent solutions through 
-          cutting-edge machine learning, deep learning, and neural network architectures.
+        <p className="text-muted-foreground text-lg mb-4 animate-fade-in-up">
+          Hello, I'm
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-600">
-          <Button 
-            variant="hero" 
-            size="xl"
-            onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            View My Work
-          </Button>
+        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in-up animation-delay-200">
+          <span className="text-foreground">Your Name</span>
+        </h1>
+
+        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-10 animate-fade-in-up animation-delay-400">
+          <span className="text-gradient">AI Engineer</span>
+        </h2>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 animate-fade-in-up animation-delay-600">
           <Button 
             variant="outline" 
             size="xl"
-            onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => window.open('/resume.pdf', '_blank')}
+            className="min-w-[180px]"
           >
-            Get In Touch
+            <FileText className="w-5 h-5 mr-2" />
+            View Resume
+          </Button>
+          <Button 
+            variant="hero" 
+            size="xl"
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/resume.pdf';
+              link.download = 'resume.pdf';
+              link.click();
+            }}
+            className="min-w-[180px]"
+          >
+            <Download className="w-5 h-5 mr-2" />
+            Download Resume
           </Button>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-primary" />
+        {/* Social Icons */}
+        <div className="flex items-center justify-center gap-6 animate-fade-in-up animation-delay-800">
+          <a 
+            href="https://linkedin.com/in/yourprofile" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full border-2 border-foreground/80 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300 hover:scale-110"
+          >
+            <Linkedin className="w-5 h-5" />
+          </a>
+          <a 
+            href="https://github.com/yourprofile" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full border-2 border-foreground/80 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300 hover:scale-110"
+          >
+            <Github className="w-5 h-5" />
+          </a>
         </div>
       </div>
 
