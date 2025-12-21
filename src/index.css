@@ -7,46 +7,46 @@
 @layer base {
   :root {
     --background: 0 0% 4%;
-    --foreground: 45 100% 96%;
+    --foreground: 50 100% 96%;
 
     --card: 0 0% 7%;
-    --card-foreground: 45 100% 96%;
+    --card-foreground: 50 100% 96%;
 
     --popover: 0 0% 7%;
-    --popover-foreground: 45 100% 96%;
+    --popover-foreground: 50 100% 96%;
 
-    --primary: 38 92% 50%;
+    --primary: 50 100% 50%;
     --primary-foreground: 0 0% 4%;
 
     --secondary: 0 0% 12%;
-    --secondary-foreground: 45 100% 96%;
+    --secondary-foreground: 50 100% 96%;
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 38 92% 50%;
+    --accent: 50 100% 50%;
     --accent-foreground: 0 0% 4%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 38 30% 20%;
+    --border: 50 30% 20%;
     --input: 0 0% 15%;
-    --ring: 38 92% 50%;
+    --ring: 50 100% 50%;
 
     --radius: 0.75rem;
 
-    --gold: 38 92% 50%;
-    --gold-light: 45 93% 58%;
-    --gold-dark: 35 90% 40%;
-    --gold-glow: 38 100% 50%;
+    --gold: 50 100% 50%;
+    --gold-light: 52 100% 60%;
+    --gold-dark: 48 100% 40%;
+    --gold-glow: 50 100% 55%;
 
-    --gradient-gold: linear-gradient(135deg, hsl(38, 92%, 50%), hsl(45, 93%, 58%));
+    --gradient-gold: linear-gradient(135deg, hsl(50, 100%, 50%), hsl(52, 100%, 60%));
     --gradient-dark: linear-gradient(180deg, hsl(0, 0%, 4%), hsl(0, 0%, 8%));
-    --gradient-radial: radial-gradient(ellipse at center, hsl(38, 92%, 50%, 0.15), transparent 70%);
+    --gradient-radial: radial-gradient(ellipse at center, hsl(50, 100%, 50%, 0.15), transparent 70%);
 
-    --shadow-gold: 0 0 30px hsl(38, 92%, 50%, 0.3);
-    --shadow-gold-intense: 0 0 60px hsl(38, 92%, 50%, 0.5);
+    --shadow-gold: 0 0 30px hsl(50, 100%, 50%, 0.3);
+    --shadow-gold-intense: 0 0 60px hsl(50, 100%, 50%, 0.5);
     --shadow-card: 0 8px 32px hsl(0, 0%, 0%, 0.5);
 
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -122,6 +122,15 @@
   .container-custom {
     @apply max-w-7xl mx-auto;
   }
+
+  /* Marquee animation for skills */
+  .marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  .marquee:hover {
+    animation-play-state: paused;
+  }
 }
 
 @layer utilities {
@@ -141,10 +150,10 @@
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(38, 92%, 50%, 0.3);
+    box-shadow: 0 0 20px hsl(50, 100%, 50%, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px hsl(38, 92%, 50%, 0.6);
+    box-shadow: 0 0 40px hsl(50, 100%, 50%, 0.6);
   }
 }
 
@@ -204,6 +213,15 @@
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
@@ -246,10 +264,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(38, 92%, 50%, 0.5);
+  background: hsl(50, 100%, 50%, 0.5);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(38, 92%, 50%, 0.8);
+  background: hsl(50, 100%, 50%, 0.8);
 }

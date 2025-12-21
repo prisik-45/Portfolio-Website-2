@@ -1,38 +1,36 @@
-import { ExternalLink, Github, Brain, Eye, MessageSquare, Workflow } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { Button } from './ui/button';
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Neural Vision Pro',
-      description: 'Advanced computer vision system using custom CNN architectures for real-time object detection and scene understanding with 98% accuracy.',
-      icon: Eye,
-      tags: ['PyTorch', 'YOLO', 'OpenCV', 'AWS'],
-      github: '#',
+      title: 'Project One',
+      subtitle: 'FULL STACK APPLICATION',
+      description: 'This is a full-stack application built using Django (DRF) for the backend and ReactJS for the frontend. It features secure user authentication with JWT, supporting registration, login, logout, token management, automatic token refresh, and blacklist handling for enhanced security.',
+      image: '/placeholder.svg',
+      techStack: ['Python', 'Django Rest Framework', 'ReactJs', 'JavaScript', 'HTML', 'CSS', 'TailwindCss', 'PostgreSQL', 'GitHub'],
+      githubFrontend: '#',
+      githubBackend: '#',
       live: '#',
     },
     {
-      title: 'LLM Orchestrator',
-      description: 'Enterprise-grade RAG system integrating multiple LLMs with vector databases for intelligent document processing and Q&A.',
-      icon: Brain,
-      tags: ['LangChain', 'GPT-4', 'Pinecone', 'FastAPI'],
-      github: '#',
+      title: 'Project Two',
+      subtitle: 'AI/ML PROJECT',
+      description: 'An intelligent machine learning system that uses advanced algorithms for data processing and prediction. Built with modern AI frameworks and deployed on cloud infrastructure for scalability and performance.',
+      image: '/placeholder.svg',
+      techStack: ['Python', 'TensorFlow', 'FastAPI', 'Docker', 'AWS', 'PostgreSQL'],
+      githubFrontend: '#',
+      githubBackend: '#',
       live: '#',
     },
     {
-      title: 'SentimentAI',
-      description: 'Multi-modal sentiment analysis platform processing text, audio, and video for comprehensive emotional intelligence insights.',
-      icon: MessageSquare,
-      tags: ['Transformers', 'HuggingFace', 'BERT', 'Flask'],
-      github: '#',
-      live: '#',
-    },
-    {
-      title: 'MLOps Pipeline',
-      description: 'End-to-end machine learning pipeline with automated training, validation, and deployment for production ML systems.',
-      icon: Workflow,
-      tags: ['MLflow', 'Kubernetes', 'Airflow', 'Docker'],
-      github: '#',
+      title: 'Project Three',
+      subtitle: 'NLP APPLICATION',
+      description: 'A natural language processing application that leverages transformer models for text analysis, sentiment detection, and intelligent document processing with RAG architecture.',
+      image: '/placeholder.svg',
+      techStack: ['Python', 'LangChain', 'OpenAI', 'Pinecone', 'React', 'TypeScript'],
+      githubFrontend: '#',
+      githubBackend: '#',
       live: '#',
     },
   ];
@@ -42,54 +40,88 @@ const ProjectsSection = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Featured Projects</span>
+            <span className="text-gradient">Projects</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-gold-light mx-auto rounded-full" />
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Showcasing innovative AI solutions that solve real-world problems
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="space-y-12">
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="glass-card p-8 rounded-2xl hover-glow group relative overflow-hidden"
+              className="glass-card p-6 md:p-8 rounded-2xl hover-glow"
             >
-              {/* Decorative gradient */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-all duration-300 group-hover:scale-110">
-                    <project.icon className="w-7 h-7 text-primary" />
+              <div className="grid md:grid-cols-2 gap-8 items-start">
+                {/* Left - Image */}
+                <div className="relative">
+                  <p className="text-primary font-display text-sm font-semibold mb-4 tracking-wider">
+                    {project.subtitle}
+                  </p>
+                  <div className="aspect-video bg-card rounded-xl overflow-hidden border border-border">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="flex gap-2">
-                    <Button variant="ghost" size="icon" className="hover:text-primary">
-                      <Github className="w-5 h-5" />
+                  
+                  {/* Action Buttons */}
+                  <div className="flex flex-wrap gap-3 mt-6">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => window.open(project.githubFrontend, '_blank')}
+                      className="gap-2"
+                    >
+                      <Github className="w-4 h-4" />
+                      Git frontend
                     </Button>
-                    <Button variant="ghost" size="icon" className="hover:text-primary">
-                      <ExternalLink className="w-5 h-5" />
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => window.open(project.githubBackend, '_blank')}
+                      className="gap-2"
+                    >
+                      <Github className="w-4 h-4" />
+                      Git backend
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => window.open(project.live, '_blank')}
+                      className="gap-2"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live
                     </Button>
                   </div>
                 </div>
 
-                <h3 className="font-display text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {project.description}
-                </p>
+                {/* Right - Content */}
+                <div>
+                  <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-8">
+                    {project.description}
+                  </p>
 
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full border border-primary/20"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {/* Tech Stack */}
+                  <div>
+                    <h4 className="font-display text-xl font-semibold text-foreground mb-4">
+                      TechStack Used
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-4 py-2 text-sm font-medium bg-foreground text-background rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
