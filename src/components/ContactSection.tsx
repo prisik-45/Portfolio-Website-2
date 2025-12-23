@@ -84,7 +84,7 @@ const ContactSection = () => {
                 </div>
 
                 <Button variant="hero" className="w-full" asChild>
-                  <a href="/Sikotra-CV 2.2.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href="./Sikotra-CV 2.2.pdf" target="_blank" rel="noopener noreferrer">
                     <FileText className="w-5 h-5 mr-2" />
                     View Resume
                   </a>

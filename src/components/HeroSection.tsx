@@ -31,7 +31,7 @@ const HeroSection = () => {
           <Button 
             variant="outline" 
             size="xl"
-            onClick={() => window.open('/Sikotra-CV 2.2.pdf', '_blank')}
+            onClick={() => window.open('./Sikotra-CV 2.2.pdf', '_blank')}
             className="min-w-[180px]"
           >
             <FileText className="w-5 h-5 mr-2" />
@@ -42,7 +42,7 @@ const HeroSection = () => {
             size="xl"
             onClick={() => {
               const link = document.createElement('a');
-              link.href = '/Sikotra-CV 2.2.pdf';
+              link.href = './Sikotra-CV 2.2.pdf';
               link.download = 'Sikotra-CV 2.2.pdf';
               link.click();
             }}
