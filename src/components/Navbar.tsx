@@ -47,7 +47,7 @@ const Navbar = () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          AI.DEV
+          Prisik 
         </a>
 
         {/* Desktop Navigation */}

@@ -6,26 +6,26 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@aidev.com',
-      href: 'mailto:hello@aidev.com',
+      value: 'princesikotra.05@gmail.com',
+      href: 'princesikotra.05@gmail.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+91 xxxxxxxxxx',
+      href: 'tel:+91xxxxxxxxxx',
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: '/in/aidev',
-      href: 'https://linkedin.com/in/aidev',
+      value: '/prince-sikotra',
+      href: 'https://www.linkedin.com/in/prince-sikotra-4a786a266/',
     },
     {
       icon: Github,
       label: 'GitHub',
-      value: '@aidev',
-      href: 'https://github.com/aidev',
+      value: '@prisik-45',
+      href: 'https://github.com/prisik-45',
     },
   ];
 
@@ -79,12 +79,12 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="text-foreground font-medium">San Francisco, CA</p>
+                    <p className="text-foreground font-medium">Ahmedabad, India</p>
                   </div>
                 </div>
 
                 <Button variant="hero" className="w-full" asChild>
-                  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href="/Sikotra-CV 2.2.pdf" target="_blank" rel="noopener noreferrer">
                     <FileText className="w-5 h-5 mr-2" />
                     View Resume
                   </a>
@@ -107,7 +107,7 @@ const ContactSection = () => {
                 <input
                   type="text"
                   className="w-full px-4 py-3 rounded-xl bg-muted border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-foreground placeholder:text-muted-foreground"
-                  placeholder="John Doe"
+                  placeholder="Prince"
                 />
               </div>
               
@@ -118,7 +118,7 @@ const ContactSection = () => {
                 <input
                   type="email"
                   className="w-full px-4 py-3 rounded-xl bg-muted border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-foreground placeholder:text-muted-foreground"
-                  placeholder="john@example.com"
+                  placeholder="abc@example.com"
                 />
               </div>
               

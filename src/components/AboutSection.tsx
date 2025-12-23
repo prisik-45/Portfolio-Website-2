@@ -45,7 +45,7 @@ const AboutSection = () => {
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               My journey in AI began with a fascination for how machines can learn and adapt. 
-              Today, I work on cutting-edge projects involving computer vision, generative AI, 
+              Today, I work on cutting-edge projects involving  generative AI, 
               and large language models, always striving to bridge the gap between research 
               and real-world applications.
             </p>

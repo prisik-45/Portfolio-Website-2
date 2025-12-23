@@ -8,12 +8,12 @@ const Footer = () => {
       <div className="container-custom px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <span className="font-display text-xl font-bold text-gradient">AI.DEV</span>
+            <span className="font-display text-xl font-bold text-gradient">Prince Sikotra</span>
           </div>
 
           <div className="flex items-center gap-6">
             <a
-              href="https://github.com/aidev"
+              href="https://github.com/prisik-45"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -21,7 +21,7 @@ const Footer = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/aidev"
+              href="https://www.linkedin.com/in/prince-sikotra-4a786a266/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -29,7 +29,7 @@ const Footer = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="mailto:hello@aidev.com"
+              href="princesikotra.05@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="w-5 h-5" />
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
 
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-primary fill-primary" /> © {currentYear}
+            © 2025 Prince Sikotra. All rights reserved.
           </p>
         </div>
       </div>

@@ -19,8 +19,8 @@ const HeroSection = () => {
           Hello, I'm
         </p>
 
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in-up animation-delay-200">
-          <span className="text-foreground">Your Name</span>
+        <h1 className="font-display text-5xl md:text-4xl lg:text-6xl font-bold mb-6 animate-fade-in-up animation-delay-200">
+          <span className="text-foreground">Prince Sikotra</span>
         </h1>
 
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-10 animate-fade-in-up animation-delay-400">
@@ -31,7 +31,7 @@ const HeroSection = () => {
           <Button 
             variant="outline" 
             size="xl"
-            onClick={() => window.open('/resume.pdf', '_blank')}
+            onClick={() => window.open('/Sikotra-CV 2.2.pdf', '_blank')}
             className="min-w-[180px]"
           >
             <FileText className="w-5 h-5 mr-2" />
@@ -42,8 +42,8 @@ const HeroSection = () => {
             size="xl"
             onClick={() => {
               const link = document.createElement('a');
-              link.href = '/resume.pdf';
-              link.download = 'resume.pdf';
+              link.href = '/Sikotra-CV 2.2.pdf';
+              link.download = 'Sikotra-CV 2.2.pdf';
               link.click();
             }}
             className="min-w-[180px]"
@@ -56,7 +56,7 @@ const HeroSection = () => {
         {/* Social Icons */}
         <div className="flex items-center justify-center gap-6 animate-fade-in-up animation-delay-800">
           <a 
-            href="https://linkedin.com/in/yourprofile" 
+            href="https://www.linkedin.com/in/prince-sikotra-4a786a266/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-12 h-12 rounded-full border-2 border-foreground/80 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300 hover:scale-110"
@@ -64,7 +64,7 @@ const HeroSection = () => {
             <Linkedin className="w-5 h-5" />
           </a>
           <a 
-            href="https://github.com/yourprofile" 
+            href="https://github.com/prisik-45" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-12 h-12 rounded-full border-2 border-foreground/80 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300 hover:scale-110"

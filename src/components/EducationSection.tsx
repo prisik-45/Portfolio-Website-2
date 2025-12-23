@@ -3,26 +3,27 @@ import { GraduationCap, Award, BookOpen } from 'lucide-react';
 const EducationSection = () => {
   const education = [
     {
-      degree: 'Master of Science in Artificial Intelligence',
-      institution: 'Your University',
-      period: '2021 - 2023',
-      description: 'Specialized in Deep Learning and Natural Language Processing. Research focused on Transformer architectures for multimodal learning.',
+      degree: 'Bachelor of Technology in Computer Engineering (Artificial Intelligence)',
+      institution: 'Institute of Advanced Research, Gandhinagar',
+      period: '2022 - 2026',
+      description: 'CGPA : 7.84',
       icon: GraduationCap,
     },
     {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'Your University',
-      period: '2017 - 2021',
-      description: 'Focus on Machine Learning and Data Science. Graduated with honors. Minor in Mathematics.',
+      degree: 'Higher Secondary Certificate (12th Standard)',
+      institution: 'Seventh-Day Adventist, Ahmedabad',
+      period: '2022',
+      description: 'Percentage : 87%',
       icon: BookOpen,
     },
   ];
 
   const certifications = [
-    'Deep Learning Specialization - Coursera',
-    'AWS Machine Learning Specialty',
-    'TensorFlow Developer Certificate',
-    'Google Cloud Professional ML Engineer',
+    "SAP Code Unnati's Advance Course",
+    'Machine Learning - Coursera',
+    'Introduction to Data Science - Infosys',
+    'Data Analysis - Great Learning',
+    
   ];
 
   return (
@@ -95,7 +96,7 @@ const EducationSection = () => {
               {[
                 { value: '3', label: 'Projects' },
                 { value: '4+', label: 'Certifications' },
-                { value: '2+', label: 'Years Learning' },
+                { value: '3+', label: 'Years Learning' },
               ].map((stat) => (
                 <div key={stat.label} className="glass-card p-4 rounded-xl text-center hover-glow">
                   <div className="font-display text-3xl font-bold text-gradient">
